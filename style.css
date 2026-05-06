@@ -208,13 +208,13 @@ body::before
 }
 
 /* ══════════════════════════════
-   TAB PANELS
+   TAB PANELS + SLIDE ANIMATIONS
 ══════════════════════════════ */
 .tab-panel
 {
     display: none;
     width: 100%;
-    animation: fadeIn 0.25s ease;
+    position: relative;
 }
 
 .tab-panel.active
@@ -222,14 +222,52 @@ body::before
     display: block;
 }
 
-@keyframes fadeIn
+.tab-panel.slide-in-right
 {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0);   }
+    animation: slideInRight 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.tab-panel.slide-in-left
+{
+    animation: slideInLeft 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.tab-panel.slide-out-left
+{
+    animation: slideOutLeft 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.tab-panel.slide-out-right
+{
+    animation: slideOutRight 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slideInRight
+{
+    from { transform: translateX(60px);  opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes slideInLeft
+{
+    from { transform: translateX(-60px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes slideOutLeft
+{
+    from { transform: translateX(0);     opacity: 1; }
+    to   { transform: translateX(-60px); opacity: 0; }
+}
+
+@keyframes slideOutRight
+{
+    from { transform: translateX(0);     opacity: 1; }
+    to   { transform: translateX(60px);  opacity: 0; }
 }
 
 /* ══════════════════════════════
-   TWO COLUMN LAYOUT (Resume/Experience)
+   TWO COLUMN LAYOUT
 ══════════════════════════════ */
 .two-col-layout
 {
@@ -262,8 +300,14 @@ body::before
     overflow-wrap: anywhere;
 }
 
+/* ── mobile-only sections: hidden on desktop, shown on mobile ── */
+.mobile-only
+{
+    display: none;
+}
+
 /* ══════════════════════════════
-   SINGLE COLUMN LAYOUT (About/Gallery/Fun Facts)
+   SINGLE COLUMN LAYOUT
 ══════════════════════════════ */
 .single-col-layout
 {
@@ -463,7 +507,7 @@ body::before
 .timeline-desc      { font-size: 0.9rem;  color: #555;    margin-top: 6px; line-height: 1.65; }
 
 /* ══════════════════════════════
-   ABOUT ME — cards grid
+   ABOUT ME CARDS
 ══════════════════════════════ */
 .about-cards-grid
 {
@@ -529,12 +573,6 @@ body::before
     gap: 0.3rem;
 }
 
-.gallery-placeholder br + *,
-.gallery-placeholder
-{
-    font-size: 0.8rem;
-}
-
 .gallery-note
 {
     text-align: center;
@@ -545,7 +583,52 @@ body::before
 }
 
 /* ══════════════════════════════
-   FUN FACTS
+   FUN FACTS BANNER
+══════════════════════════════ */
+#funfacts-banner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 2rem 2rem 1rem;
+    width: 100%;
+    overflow: visible;
+}
+
+.banner-letter
+{
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.2rem, 5.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1;
+    display: inline-block;
+    flex-shrink: 1;
+    min-width: 0;
+    -webkit-text-stroke: 4px #1a1a1a;
+    paint-order: stroke fill;
+    color: #CECBF6;
+    animation: letterBounce 0.5s ease both;
+}
+
+.banner-space
+{
+    display: inline-block;
+    width: clamp(0.3rem, 1.5vw, 1rem);
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+@keyframes letterBounce
+{
+    0%   { transform: translateY(12px); opacity: 0; }
+    60%  { transform: translateY(-6px); }
+    100% { transform: translateY(0);    opacity: 1; }
+}
+
+/* ══════════════════════════════
+   FUN FACTS CARDS
 ══════════════════════════════ */
 .funfacts-grid
 {
@@ -588,59 +671,11 @@ body::before
 .teal-card   { background-color: #E4F8F1; border-color: #9FE1CB; color: #085041; }
 .amber-card  { background-color: #FEF3E2; border-color: #FAC775; color: #633806; }
 
-/* ── Fun Facts Banner ── */
-#funfacts-banner
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0;
-    padding: 2rem 2rem 2rem;
-    width: 100%;
-    overflow: visible;
-}
-
-.banner-letter
-{
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.2rem, 5.5vw, 5.5rem);
-    font-weight: 800;
-    line-height: 1;
-    display: inline-block;
-    flex-shrink: 1;
-    min-width: 0;
-    -webkit-text-stroke: 4px #1a1a1a;
-    paint-order: stroke fill;
-    color: #CECBF6;
-    animation: letterBounce 0.5s ease both;
-}
-
-.banner-space
-{
-    display: inline-block;
-    width: clamp(0.3rem, 1.5vw, 1rem);
-    flex-shrink: 1;
-    min-width: 0;
-}
-
-@keyframes letterBounce
-{
-    0%   { transform: translateY(12px); opacity: 0; }
-    60%  { transform: translateY(-6px); }
-    100% { transform: translateY(0);    opacity: 1; }
-}
-
 /* ══════════════════════════════
    MOBILE  (≤ 700px)
 ══════════════════════════════ */
 @media (max-width: 700px)
 {
-    .banner-letter
-    {
-        font-size: clamp(2rem, 5.5vw, 5.5rem);
-    }
-
     .page-wrapper
     {
         padding: 0.75rem;
@@ -653,7 +688,10 @@ body::before
 
     #icon-circle
     {
-        width: 3.5rem; height: 3.5rem; min-width: 3.5rem; margin: 0.4rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        min-width: 3.5rem;
+        margin: 0.4rem;
     }
 
     #icon-circle span { font-size: 1.9rem; }
@@ -668,6 +706,7 @@ body::before
     .tab-arrow        { width: 2rem; height: 2rem; font-size: 1rem; }
     #tab-label        { font-size: 0.95rem; }
 
+    /* ── Resume tab: collapse to single column ── */
     .two-col-layout
     {
         grid-template-columns: 1fr;
@@ -675,17 +714,26 @@ body::before
         padding: 0.75rem 0;
     }
 
-    .col-sidebar      { position: static; padding: 1rem; }
+    /* hide the sidebar entirely on mobile for resume tab —
+       content is duplicated in mobile-only sections in col-main */
+    .col-sidebar
+    {
+        display: none;
+    }
+
+    /* show the mobile-only duplicate sections */
+    .mobile-only
+    {
+        display: block;
+    }
 
     .col-main .section-container { margin-top: 1.5rem; }
 
     .single-col-layout { padding: 1rem 0; }
 
-    .about-cards-grid { grid-template-columns: 1fr 1fr; }
-
+    .about-cards-grid         { grid-template-columns: 1fr 1fr; }
     .gallery-placeholder-grid { grid-template-columns: repeat(2, 1fr); }
-
-    .funfacts-grid    { grid-template-columns: repeat(2, 1fr); }
+    .funfacts-grid            { grid-template-columns: repeat(2, 1fr); }
 
     .closed-container p  { font-size: 0.9rem; }
     .timeline-body h3    { font-size: 0.95rem; }
