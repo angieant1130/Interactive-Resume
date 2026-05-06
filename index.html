@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angie Antiorio</title>
+    <link rel="icon" type="image/svg+xml" href="UsedItems/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+        <div id="header-content">
+            <div class="flex-container">
+                <div id="icon-circle">
+                    <span>📚</span>
+                </div>
+                <div id="header-personal">
+                    <h1>Angelina Antiorio</h1>
+                    <p>Elementary Education • Montclair State University</p>
+                    <p>973-580-3864 • angieant1130@gmail.com • North Arlington, NJ</p>
+                </div>
+            </div>
+            <div class="tags">
+                <span>Future Educator</span>
+                <span>Student Teacher</span>
+            </div>
+        </div>
+
+        <!-- ARROW TAB BAR -->
+        <div id="tab-bar">
+            <button id="tab-prev" class="tab-arrow" onclick="shiftTab(-1)">&#8592;</button>
+            <div id="tab-label">Resume</div>
+            <button id="tab-next" class="tab-arrow" onclick="shiftTab(1)">&#8594;</button>
+        </div>
+
+        <!-- DOT INDICATORS -->
+        <div id="tab-dots">
+            <span class="tab-dot active" onclick="goToTab(0)"></span>
+            <span class="tab-dot" onclick="goToTab(1)"></span>
+            <span class="tab-dot" onclick="goToTab(2)"></span>
+            <span class="tab-dot" onclick="goToTab(3)"></span>
+            <span class="tab-dot" onclick="goToTab(4)"></span>
+        </div>
+
+        <!-- ══════════════════════════════
+             TAB 1 — RESUME
+        ══════════════════════════════ -->
+        <div id="tab-resume" class="tab-panel active">
+            <div class="two-col-layout">
+
+                <div class="col-sidebar">
+                    <div class="section-container">
+                        <div class="section-label"><span>EDUCATION</span></div>
+                        <div class="sidebar-card">
+                            <span class="card-label">University</span>
+                            <h3>Montclair State University</h3>
+                            <p>Elementary Education</p>
+                            <p>August 2023 – Present</p>
+                        </div>
+                        <div class="sidebar-card">
+                            <span class="card-label">High School</span>
+                            <h3>North Arlington High School</h3>
+                            <p>Diploma • Graduated June 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
+                        <div class="section-label"><span>SKILLS</span></div>
+                        <div class="skills-container">
+                            <span class="skill-tag purple">Communication</span>
+                            <span class="skill-tag pink">Customer Service</span>
+                            <span class="skill-tag teal">Teamwork</span>
+                            <span class="skill-tag amber">Organizational Skills</span>
+                            <span class="skill-tag purple">Fast Learner</span>
+                            <span class="skill-tag teal">Youth Leadership</span>
+                            <span class="skill-tag pink">Event Scheduling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-main">
+                    <div class="section-container">
+                        <div class="section-label"><span>ABOUT</span></div>
+                        <div class="closed-container">
+                            <p>Dedicated education student with hands-on classroom experience across Newark
+                                Public Schools and a strong background in youth leadership. Passionate about
+                                building inclusive, engaging environments where every child can thrive.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
+                        <div class="section-label"><span>WORK EXPERIENCE</span></div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot purple-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Substitute Teacher</h3>
+                                <p class="timeline-org">North Arlington School District • North Arlington High School</p>
+                                <p class="timeline-date">January 2025 – June 2025</p>
+                                <p class="timeline-desc">Served as substitute teacher across the district. Left as the school year concluded and increased hours at ISCA.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot pink-dot"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Multi-Position Employee</h3>
+                                <p class="timeline-org">Inline Skating Club of America (ISCA) • North Arlington, NJ</p>
+                                <p class="timeline-date">January 2022 – Present</p>
+                                <p class="timeline-desc">Worked across 6+ roles including Snack Bar, Front Desk, Birthday Party Host, Skate Guard, Office (scheduling, emails, phone calls), and Manager (opening/closing the facility).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════
+             TAB 2 — EXPERIENCE
+        ══════════════════════════════ -->
+        <div id="tab-experience" class="tab-panel">
+            <div class="two-col-layout">
+
+                <div class="col-sidebar">
+                    <div class="section-container">
+                        <div class="section-label"><span>VOLUNTEER WORK</span></div>
+                        <div class="sidebar-card">
+                            <span class="card-label">Volunteer</span>
+                            <h3>Color Guard Instructor</h3>
+                            <p>North Arlington HS Marching Band</p>
+                            <p>Fall 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
+                        <div class="section-label"><span>NON-TEACHING INVOLVEMENT</span></div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot teal-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Color Guard — Captain</h3>
+                                <p class="timeline-org">North Arlington High School</p>
+                                <p class="timeline-date">2019–2023 • Captain 2022–23</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot teal-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Concert Band — Percussionist</h3>
+                                <p class="timeline-org">North Arlington High School</p>
+                                <p class="timeline-date">Junior & Senior Year • 2021–2023</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot teal-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Tri-M Music Honor Society</h3>
+                                <p class="timeline-org">North Arlington High School</p>
+                                <p class="timeline-date">Senior Year • 2022–2023</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot teal-dot"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Drama Club — Cast Member</h3>
+                                <p class="timeline-org">North Arlington High School</p>
+                                <p class="timeline-date">Spring 2022 & 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-main">
+                    <div class="section-container">
+                        <div class="section-label"><span>CLASSROOM EXPERIENCE</span></div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot purple-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Clinical I</h3>
+                                <p class="timeline-org">Newark Public Schools</p>
+                                <p class="timeline-date">In Progress</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot purple-dot"></div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Pre-Clinical — 34.75 Hours</h3>
+                                <p class="timeline-org">Camden Street Elementary School • Newark Public Schools</p>
+                                <p class="timeline-date">Spring 2026 • Placement: Kaie Stewart • 5th Grade, Self-Contained</p>
+                                <p class="timeline-desc">Completed pre-clinical hours in a 5th grade self-contained classroom, supporting instruction and student engagement.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-left">
+                                <div class="timeline-dot pink-dot"></div>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Shadowing — 25 Hours</h3>
+                                <p class="timeline-org">South Street Elementary School • Newark Public Schools</p>
+                                <p class="timeline-date">Fall 2024 • Placement: Genely Abreu • 5th & 6th Grade, Science & Math</p>
+                                <p class="timeline-desc">Observed and supported instruction in 5th and 6th grade Science and Math classrooms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════
+             TAB 3 — ABOUT ME
+        ══════════════════════════════ -->
+        <div id="tab-about" class="tab-panel">
+            <div class="single-col-layout">
+
+                <div class="section-container">
+                    <div class="section-label"><span>WHO I AM</span></div>
+                    <div class="closed-container">
+                        <p>Hi! I'm Angie — a passionate elementary education student at Montclair State University with a love for creating classrooms where every child feels seen, supported, and excited to learn. I grew up in North Arlington, NJ and have been working since my junior year of high school, building skills in teamwork, communication, and leadership along the way.</p>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-label"><span>MY TEACHING PHILOSOPHY</span></div>
+                    <div class="closed-container">
+                        <p>I believe every child walks into the classroom with something valuable to offer. My role as a teacher is to nurture curiosity, celebrate small wins, and build a community where students feel safe enough to take risks and grow. Learning should feel joyful — not just for students, but for the teacher too.</p>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-label"><span>OUTSIDE THE CLASSROOM</span></div>
+                    <div class="about-cards-grid">
+                        <div class="about-card">
+                            <span class="about-card-icon">🎶</span>
+                            <h3>Music</h3>
+                            <p>4 years of Color Guard and Concert Band. Music has always been a big part of who I am.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🎭</span>
+                            <h3>Drama</h3>
+                            <p>Cast member in two spring productions. I love performance and storytelling.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">⛸️</span>
+                            <h3>Skating</h3>
+                            <p>Working at ISCA since 2022 — managing events, hosting birthday parties, and keeping the rink running.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">📖</span>
+                            <h3>Reading</h3>
+                            <p>Always looking for the next great children's book to bring into the classroom.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════
+             TAB 4 — GALLERY
+        ══════════════════════════════ -->
+        <div id="tab-gallery" class="tab-panel">
+            <div class="single-col-layout">
+                <div class="section-container">
+                    <div class="section-label"><span>GALLERY</span></div>
+                    <div class="gallery-placeholder-grid">
+                        <div class="gallery-placeholder">📸<br>Photo 1</div>
+                        <div class="gallery-placeholder">📸<br>Photo 2</div>
+                        <div class="gallery-placeholder">📸<br>Photo 3</div>
+                        <div class="gallery-placeholder">📸<br>Photo 4</div>
+                        <div class="gallery-placeholder">📸<br>Photo 5</div>
+                        <div class="gallery-placeholder">📸<br>Photo 6</div>
+                    </div>
+                    <p class="gallery-note">Photos coming soon! Check back after the November convention.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════
+             TAB 5 — FUN FACTS
+        ══════════════════════════════ -->
+        <div id="tab-funfacts" class="tab-panel">
+            <div class="single-col-layout">
+                <div class="section-container">
+
+                    <div id="funfacts-banner">
+                        <span class="banner-letter">F</span>
+                        <span class="banner-letter">U</span>
+                        <span class="banner-letter">N</span>
+                        <span class="banner-space"> </span>
+                        <span class="banner-letter">F</span>
+                        <span class="banner-letter">A</span>
+                        <span class="banner-letter">C</span>
+                        <span class="banner-letter">T</span>
+                        <span class="banner-letter">S</span>
+                    </div>
+
+                    <div class="section-label"><span>FUN FACTS ABOUT ANGIE</span></div>
+                    <div class="funfacts-grid">
+
+                        <div class="funfact-card purple-card">
+                            <span class="funfact-icon">🍎</span>
+                            <h3>Favorite Subject to Teach</h3>
+                            <p>Reading & Literacy — there's nothing better than watching a student fall in love with a book.</p>
+                        </div>
+
+                        <div class="funfact-card pink-card">
+                            <span class="funfact-icon">📚</span>
+                            <h3>Favorite Children's Book</h3>
+                            <p>Add your favorite here!</p>
+                        </div>
+
+                        <div class="funfact-card teal-card">
+                            <span class="funfact-icon">🎯</span>
+                            <h3>Teaching Motto</h3>
+                            <p>"Every child deserves a champion — an adult who will never give up on them."</p>
+                        </div>
+
+                        <div class="funfact-card amber-card">
+                            <span class="funfact-icon">⛸️</span>
+                            <h3>Hidden Talent</h3>
+                            <p>Inline skating! Years of working at ISCA means she can glide around the rink like a pro.</p>
+                        </div>
+
+                        <div class="funfact-card purple-card">
+                            <span class="funfact-icon">🎶</span>
+                            <h3>Instrument</h3>
+                            <p>Percussion — she was a percussionist in Concert Band junior and senior year of high school.</p>
+                        </div>
+
+                        <div class="funfact-card pink-card">
+                            <span class="funfact-icon">🌟</span>
+                            <h3>Currently Learning</h3>
+                            <p>Clinical I placement this semester — putting everything into practice in a real classroom!</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end .page-wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
