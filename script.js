@@ -1,7 +1,7 @@
 // ── Tab data ──────────────────────────────────────────
 const TABS = [
     { id: 'tab-resume',     label: 'Resume'      },
-    { id: 'tab-experience', label: 'Experience'  },
+    { id: 'tab-experience', label: 'Classroom Experience'  },
     { id: 'tab-about',      label: 'About Me'    },
     { id: 'tab-gallery',    label: 'Gallery'     },
     { id: 'tab-funfacts',   label: 'Fun Facts'   },
